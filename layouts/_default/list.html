@@ -4,18 +4,16 @@
 
   <ul class="posts">
   {{ range .Data.Pages }}
-      <li class="post" style="white-space: nowrap;">
+      <li class="post" style="white-space: nowrap; padding: 10px;">
 
-    <span class="post-title">
+    <span class="post-title" style="padding: 10px;">
           <a href="{{ .Permalink }}">{{ .Title }}</a>
     </span>
           &middot;
-          <span class="post-date"><time>{{ .Date.Format "Jan 2, 2006" }}</time></span>
-          &middot;
+          <span class="post-date" style="padding: 10px;"><time>{{ .Date.Format "Jan 2, 2006" }}</time></span>
     {{ if isset .Params "categories" }}
 
     {{ range .Params.categories }}<a class="a_cat" href="{{ "/categories/" | absURL }}{{ . | urlize }}">{{ . }}</a>{{ end }}
-      &middot;
       {{ if isset .Params "tags" }}
       {{ range .Params.tags }}<a class="a_tag" href="{{ "/tags/" | absURL }}{{ . | urlize }}">{{ . | lower }}</a>{{ end }}
       {{ end }}
