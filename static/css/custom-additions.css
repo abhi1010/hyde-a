@@ -1,0 +1,123 @@
+
+/* ABHI */
+.theme-base-aa .sidebar {
+    background-color: #400d22;
+}
+
+/* all default href colors */
+.theme-base-aa .content a{
+    color: #C3044C;
+    position: relative;
+}
+
+
+.theme-base-aa .related-posts li a:hover {
+    /*color: #400d22;*/
+    color: #C3044C;
+}
+
+/* Heading of the Blog Post color */
+.theme-base-aa .content > .posts > .post > .post-title > a {
+    /*color: #400d22;*/
+    color: #400d22;
+}
+
+
+/* underline blog links to make them stand out */
+.theme-base-aa .content > .posts > .post > .post-title > a:hover,
+.theme-base-aa .content > .posts > .post > .post-title > a:focus {
+    text-decoration: underline;
+}
+/* From bootstrap.css 3.3.2 - start */
+.theme-base-aa .content a.a_cat {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: bold;
+    font-variant: small-caps;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+    border-color: #0000ee;
+    background-color: #400d22;
+    margin:1px;
+}
+a.a_cat:hover,
+a.a_cat:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+.a_cat:empty {
+    display: none;
+}
+/* From bootstrap.css 3.3.2 - start */
+.theme-base-aa .content a.a_tag {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: bold;
+    text-transform: lowercase;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+    border-color: #0000ee;
+    background-color: #6ebdff;
+    margin:1px;
+}
+.theme-base-aa .content a.a_tag:before {
+    content: "#";
+}
+
+a.a_tag:hover,
+a.a_tag:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+.a_tag:empty {
+    display: none;
+}
+
+
+
+/* disable animations of custom classes of a:href */
+.theme-base-aa .content a.a_tag:after {
+    border-bottom: 0;
+}
+.theme-base-aa .content a.a_cat:after {
+    border-bottom: 0;
+}
+.theme-base-aa .content > .posts > .post > .post-title > a:after {
+    border-bottom: 0;
+}
+
+
+/* animate */
+.theme-base-aa .content a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    border-bottom: 2px solid #C3044C;
+    transition: 0.4s;
+}
+
+.theme-base-aa .content a:hover:after {
+    width: 100%;
+}
+
+
+/* disable hover and focus underlines from poole.css */
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+

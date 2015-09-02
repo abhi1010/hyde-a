@@ -1,0 +1,17 @@
+{{ partial "head.html" . }}
+<div class="content container">
+  <div class="post">
+    <h1>{{ .Title }}</h1>
+    <span class="post-date" style="float:right;"><time>{{ .Date.Format "Jan 2, 2006" }}</time></span>
+
+      {{ if isset .Params "categories" }}
+          {{ range .Params.categories }}<a class="a_cat" href="{{ "/categories/" | absURL }}{{ . | urlize }}">{{ . }}</a>{{ end }}
+      {{ end }}
+      {{ if isset .Params "tags" }}
+        {{ range .Params.tags }}<a class="a_tag" href="{{ "/tags/" | absURL }}{{ . | urlize }}">{{ . | lower }}</a>{{ end }}
+      {{ end }}
+
+    {{ .Content }}
+  </div>
+</div>
+{{ partial "foot.html" . }}
