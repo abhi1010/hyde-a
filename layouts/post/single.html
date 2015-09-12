@@ -12,7 +12,11 @@
         {{ range .Params.tags }}<a class="a_tag" href="{{ "/tags/" | absURL }}{{ . | urlize }}">{{ . | lower }}</a>{{ end }}
       {{ end }}
 
-    {{ end }}</span>
+    {{ end }}
+    </span>
+      <div id="_toc" class="toc">
+        {{ .TableOfContents }}
+      </div>
     {{ .Content }}
   </div>
   {{ if .Site.DisqusShortname }}<div id="disqus_thread"></div>{{ end }}

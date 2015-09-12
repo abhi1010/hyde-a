@@ -121,3 +121,32 @@ a:focus {
     text-decoration: none;
 }
 
+#TableOfContents {
+    color: black;
+    background-color: rgba(84, 84, 84, 0.13);
+    border: #a1a1a1 1px solid;
+    border-radius: 20px;
+    padding-top: 0.8rem;
+    padding-bottom: 0;
+    margin: 0.3rem;
+}
+
+#TableOfContents > ul > li  {
+    list-style-type: none;
+}
+
+#TableOfContents  ul  a  {
+    color: #5a5a5a;
+}
+#TableOfContents > ul > li > ul > li {
+    list-style-type: lower-roman;
+}
+
+#TableOfContents > ul > li > ul > li > ul > li {
+    list-style-type: square;
+}
+
+/*http://jsfiddle.net/danield770/WTnma/3/*/
+/*https://css-tricks.com/automatic-table-of-contents/*/
+
+/*http://5thirtyone.com/tutorial/how-to-create-a-table-of-contents-navigation/*/
