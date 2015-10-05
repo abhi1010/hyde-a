@@ -388,6 +388,7 @@ a.label:focus {
 .theme-base-aa .pagination > li > a,
 .theme-base-aa .pagination > li > span {
   color: #300030;
+  background-color: #0000ee;
 }
 
 .theme-base-aa .pagination > .active > a,
