@@ -11,7 +11,7 @@
     {{ $desc := printf "%s-desc" .Data.Singular}}
     {{ $desctax := index .Site.Taxonomies $desc }}
 
-    <ul class="tags blue">
+    <ul class="tags magenta">
     {{ range $name, $pages := .Data.Terms }}
       {{ $page := index $pages 0 }}
       {{ $friendly := index $page.Page.Params $taxname 0 }}

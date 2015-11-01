@@ -282,3 +282,18 @@ a:focus {
   background-image: -o-linear-gradient(top, #6aaeda, #4298d0);
   background-image: linear-gradient(to bottom, #6aaeda, #4298d0);
 }
+
+
+.magenta li:after {
+  background: #9F0340;
+  -webkit-box-shadow: inset 1px 0 #890335;
+  box-shadow: inset 1px 0 #C3044C;
+}
+.magenta span {
+  background: #9b033c;
+  border-color: #800a36 #8c0b3b #8a0b3a;
+  background-image: -webkit-linear-gradient(top, #af0c4a, #760932);
+  background-image: -moz-linear-gradient(top, #AF0C4A, #760932);
+  background-image: -o-linear-gradient(top, #AF0C4A, #760932);
+  background-image: linear-gradient(to bottom, #AF0C4A, #760932);
+}
