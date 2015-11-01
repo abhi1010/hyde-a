@@ -1,8 +1,8 @@
 {{ partial "head.html" . }}
    <div class="content container">
+       <!--This is the place I need to change to make the tag cloud-->
    <h1 class="title">{{ .Title }}</h1>
 
-    <ul>
     {{ $base := .Site.BaseURL }}
     {{ $data := .Data}}
 
@@ -11,18 +11,48 @@
     {{ $desc := printf "%s-desc" .Data.Singular}}
     {{ $desctax := index .Site.Taxonomies $desc }}
 
-
+    <ul class="tags blue">
     {{ range $name, $pages := .Data.Terms }}
       {{ $page := index $pages 0 }}
       {{ $friendly := index $page.Page.Params $taxname 0 }}
       {{ $pageCount := len $pages }}
-      <a href="{{$base}}/{{$data.Plural}}/{{$name}}">{{ replace $name "-" " " | lower }}</a> &nbsp;({{ $pageCount }} {{ if eq $pageCount 1 }}entry{{ else }}entries{{ end }})
-        <br />
+        <li>
+      <a href="#{{ $name }}">
+          {{ replace $name "-" " " | lower }}
+        <span>
+            {{ $pageCount }}
+        </span>
+      </a>
+    </li>
+
       {{ $descpages := index $desctax $name }}
       {{ if len $descpages }}
         {{ $descpage := index $descpages 0 }}
         <span class="term-desc">{{ $descpage.Page.Content }}</span>
       {{end}}
     {{ end }}
+    </ul>
+
+       <section>
+
+            {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+              {{ if eq $taxname $taxonomyname }}
+                  {{ range $key, $value := $taxonomy }}
+                    <h2>
+                        <a id="{{ $key }}" href="{{$base}}/{{$data.Plural}}/{{$key}}">{{ $key }}</a>
+                    </h2>
+                        <ul>
+                        {{ range $value.Pages }}
+                            <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a> </li>
+                        {{ end }}
+                        </ul>
+                  {{ end }}
+              {{ end }}
+            {{ end }}
+
+        </section>
+
+    <ul>
+
    </ul>
   </div>
