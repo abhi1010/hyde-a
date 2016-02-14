@@ -2,8 +2,8 @@
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       {{ with .Site.Params.gravatarHash }}<img src="https://www.gravatar.com/avatar/{{ . }}?s=200" alt="gravatar">{{ end }}
-      <h1><a href="{{ "/" | absURL }}">{{ .Site.Author.name }}</a></h1>
-      {{ with .Site.Params.tagline }}<p class="lead">{{ . | markdownify }}</p>{{ end }}
+      {{ with .Site.Params.tagline }}<h1><a href="{{ "/" | absURL }}">{{ . | markdownify }}</a></h1>{{ end }}
+      <p class="lead">{{ .Site.Author.name }}</p>
     </div>
 
     <ul class="sidebar-nav">
