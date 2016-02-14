@@ -297,3 +297,12 @@ a:focus {
   background-image: -o-linear-gradient(top, #AF0C4A, #760932);
   background-image: linear-gradient(to bottom, #AF0C4A, #760932);
 }
+
+
+/*
+ * Tweaks and overrides to hyde.css
+ */
+
+.sidebar-about p {
+  color: #a3a3a3;
+}

@@ -3,7 +3,7 @@
     <div class="sidebar-about">
       {{ with .Site.Params.gravatarHash }}<img src="https://www.gravatar.com/avatar/{{ . }}?s=200" alt="gravatar">{{ end }}
       {{ with .Site.Params.tagline }}<h1><a href="{{ "/" | absURL }}">{{ . | markdownify }}</a></h1>{{ end }}
-      <p class="lead">{{ .Site.Author.name }}</p>
+      <a href="{{ "/" | absURL }}"><p>{{ .Site.Author.name }}</p></a>
     </div>
 
     <ul class="sidebar-nav">
